@@ -1,0 +1,233 @@
+@-webkit-keyframes arrow-left {
+  0% {
+    left: 35%;
+  }
+  50% {
+    left: 15%;
+  }
+  100% {
+    left: 35%;
+  }
+}
+
+@keyframes arrow-left {
+  0% {
+    left: 35%;
+  }
+  50% {
+    left: 15%;
+  }
+  100% {
+    left: 35%;
+  }
+}
+
+@-webkit-keyframes kick {
+  0% {
+    left: 50%;
+  }
+  50% {
+    left: 35%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes kick {
+  0% {
+    left: 50%;
+  }
+  50% {
+    left: 35%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+.preview {
+  margin-bottom: 54px;
+}
+
+.article {
+  max-width: 652px;
+  margin: 0 auto;
+}
+
+.article h1 {
+  text-align: center;
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+
+.article p {
+  margin: 0 auto;
+  line-height: 24px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.article .about_article {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 332px;
+  margin-bottom: 26px;
+  color: rgba(28, 28, 28, 0.5);
+}
+
+.author {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 37px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 163px;
+}
+
+@media only screen and (max-width: 500px) {
+  .author {
+    grid-auto-flow: row;
+    justify-items: center;
+  }
+}
+
+.author img {
+  max-width: 160px;
+}
+
+.author_block {
+  margin: 0 auto;
+  max-width: 652px;
+}
+
+.author_block span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(28, 28, 28, 0.5);
+  text-transform: uppercase;
+}
+
+.author__info h4 {
+  font-size: 33px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 500px) {
+  .author__info h4 {
+    text-align: center;
+  }
+}
+
+.author__info span {
+  display: block;
+  font-size: 13px;
+  color: rgba(28, 28, 28, 0.5);
+  margin-bottom: 13px;
+}
+
+@media only screen and (max-width: 500px) {
+  .author__info span {
+    text-align: center;
+  }
+}
+
+.author__info p {
+  line-height: 22px;
+}
+
+.container_big {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.article__switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.article__switcher .switcher__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arrow {
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow::after, .arrow::before {
+  content: "";
+  height: 5px;
+  width: 50%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.arrow__back::before {
+  top: 30%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 25%;
+}
+
+.arrow__back::after {
+  top: 64%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 25%;
+}
+
+.arrow__back:hover::after, .arrow__back:hover::before {
+  -webkit-animation: arrow-left;
+          animation: arrow-left;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.arrow__forward::before {
+  top: 30%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 25%;
+}
+
+.arrow__forward::after {
+  top: 64%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 25%;
+}
+
+.arrow__forward:hover::after, .arrow__forward:hover::before {
+  -webkit-animation: kick;
+          animation: kick;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+/*# sourceMappingURL=article.css.map */

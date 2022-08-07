@@ -1,0 +1,157 @@
+@import "./variables.scss";
+.header {
+  padding: 43px 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 31px;
+
+    @media only screen and (max-width: 980px) {
+      display: none;
+      flex-direction: column;
+      align-items: end;
+      position: absolute;
+      right: 0;
+      top: 116px;
+      text-align: right;
+      width: 100%;
+      background-color: #fff;
+      & > * {
+        width: 100%;
+        margin-right: 0 !important;
+        padding: 10px;
+        border-bottom: 1px solid #000;
+      }
+    }
+
+    a {
+      font-family: $titles;
+      font-size: 20px;
+      line-height: 25px;
+
+      &:not(:last-child) {
+        margin-right: 31px;
+      }
+
+      &:last-of-type {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .burger_button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    box-shadow: none;
+
+    @media only screen and (max-width: 980px) {
+      display: block;
+    }
+  }
+
+  .burger {
+    display: none;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+
+    &::before {
+      left: 0;
+      top: -10px;
+    }
+    &::after {
+      top: 10px;
+      left: 0;
+    }
+    @media only screen and (max-width: 980px) {
+      display: block;
+    }
+  }
+
+  .search__wrapper {
+    position: relative;
+
+    input {
+      padding-left: 10px;
+      padding-right: 50px;
+      width: 0;
+      height: 46px;
+      border: 2px solid black;
+      border-radius: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.4s;
+    }
+  }
+
+  .find {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    z-index: 5;
+    box-shadow: none;
+  }
+
+  .login {
+    margin-left: 21px;
+    font-size: 20px;
+    line-height: 24.8px;
+    border: 2px solid #1c1c1c;
+    border-radius: 10px;
+    width: 135px;
+    height: 46px;
+    padding: 11px;
+    font-family: $titles;
+  }
+}
+
+.logo {
+  position: relative;
+  width: 178px;
+
+  p {
+    padding: 0;
+    position: absolute;
+    left: 16px;
+    bottom: 9px;
+    font-size: 30px;
+    line-height: 1;
+    vertical-align: text-bottom;
+    font-family: $titles;
+    font-weight: 700;
+  }
+
+  span {
+    color: white;
+  }
+}
+
+.square {
+  width: 58px;
+  height: 58px;
+  background-color: black;
+}
+
+.open {
+  display: flex !important;
+}
