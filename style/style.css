@@ -46,6 +46,10 @@ a {
   color: black;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .fa-brands {
   font-size: 30px;
 }

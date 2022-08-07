@@ -70,9 +70,9 @@ function searchRes(value) {
                   alt="${article.topic}"
                 />
                 <div class="mini__article">
-                  <h3>${article.topic}</h3>
+                  <a href="./article.html"><h3>${article.topic}</h3></a>
                   <span>${article.author}</span>
-                  <span>.</span>
+                  <span>&bull;</span>
                   <span>${article.date}</span>
                   <p>
                     ${article.text}
