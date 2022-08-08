@@ -3,10 +3,27 @@
     padding: 196px 0;
     max-width: 370px;
     margin: 0 auto;
-    text-align: center;
+    h3 {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center;
+    }
+
     .logo {
       margin: 0 auto;
+      margin-bottom: 26px;
+      p {
+        left: 32px;
+        font-size: 42px;
+      }
     }
+  }
+
+  .square {
+    width: 94px;
+    height: 78px;
+    background-color: black;
   }
 
   .black_container {
@@ -31,6 +48,9 @@
       width: 1016px;
       top: 0;
       right: 100px;
+      @media only screen and (max-width: 1032px) {
+        width: 100px;
+      }
     }
 
     &::after {
@@ -39,6 +59,9 @@
       width: 1452px;
       bottom: 0;
       left: 100px;
+      @media only screen and (max-width: 1032px) {
+        width: 100px;
+      }
     }
   }
 
@@ -92,7 +115,7 @@
       margin-bottom: 32px;
     }
   }
-
+  //Third Block ////////////////////
   .third_block {
     max-width: 1010px;
     margin-left: auto;
@@ -114,17 +137,22 @@
     }
 
     .third_block__galery {
-      display: grid;
+      display: flex;
       justify-content: center;
       align-items: stretch;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      grid-gap: 20px;
+      gap: 20px;
 
       img {
-        max-height: 350px;
+        min-width: 100px;
+        max-width: 350px;
+        &:last-of-type {
+          max-width: 270px;
+        }
       }
     }
   }
+
+  ////////////////////////
 
   .tagline {
     padding: 230px 0;
@@ -142,6 +170,8 @@
     }
   }
 }
+
+//Footer ////////////////////
 
 .footer {
   color: #fff;

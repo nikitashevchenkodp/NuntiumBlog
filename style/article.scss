@@ -54,7 +54,7 @@
     color: rgba(28, 28, 28, 0.5);
   }
 }
-
+//Author///////////////////////////////////////
 .author {
   display: grid;
   grid-auto-flow: column;
@@ -114,19 +114,27 @@
 .article__switcher {
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 870px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .switcher__block {
     display: flex;
     align-items: center;
   }
 }
-
+//Arrows///////////////////////////
 .arrow {
   width: 150px;
   height: 150px;
   background-color: black;
   position: relative;
   cursor: pointer;
+  @media only screen and (max-width: 964px) {
+    width: 100px;
+    height: 100px;
+  }
   &::after,
   &::before {
     content: "";
@@ -137,6 +145,7 @@
   }
 
   &__back {
+    margin-right: 15px;
     &::before {
       top: 30%;
       transform: rotate(-45deg);
@@ -158,6 +167,7 @@
   }
 
   &__forward {
+    margin-left: 15px;
     &::before {
       top: 30%;
       transform: rotate(45deg);

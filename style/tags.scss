@@ -62,14 +62,24 @@
   .articles__list {
     &-item {
       grid-template-columns: auto 1fr;
+      @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
 
       img {
         max-width: 237px;
+        @media only screen and (max-width: 800px) {
+          max-width: 500px;
+        }
       }
 
       .mini__article {
         p {
           margin-top: 0;
+          @media only screen and (max-width: 800px) {
+            display: none;
+          }
         }
 
         span {
