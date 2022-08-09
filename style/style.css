@@ -30,13 +30,6 @@ button {
   transition: 0.3s;
 }
 
-button:not(.burger_button):hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 img {
   width: 100%;
 }
@@ -268,6 +261,13 @@ h6 {
   font-family: "Libre Baskerville", serif;
 }
 
+.header .login:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 @media only screen and (max-width: 980px) {
   .header .login {
     margin-left: 0;
@@ -422,6 +422,16 @@ h6 {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
   line-height: 19.84px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.tags__list li:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .tags .articles__list-item {

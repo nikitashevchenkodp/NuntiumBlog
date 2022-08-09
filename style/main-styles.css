@@ -29,13 +29,6 @@ button {
   transition: 0.3s;
 }
 
-button:not(.burger_button):hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 img {
   width: 100%;
 }
