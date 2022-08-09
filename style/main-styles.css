@@ -1,12 +1,12 @@
-@import "./variables.scss";
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 body {
-  font-family: $main-font;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -25,12 +25,15 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
+}
 
-  &:not(.burger_button):hover {
-    transform: scale(1.02);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
+button:not(.burger_button):hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 img {
@@ -40,10 +43,10 @@ img {
 a {
   text-decoration: none;
   color: black;
+}
 
-  &:hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
 }
 
 .fa-brands {
@@ -56,9 +59,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $titles;
+  font-family: "Libre Baskerville", serif;
 }
 
 .active {
   font-weight: 700;
 }
+/*# sourceMappingURL=main-styles.css.map */

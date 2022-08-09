@@ -1,6 +1,7 @@
 const tagsList = document.querySelector('.tags__list');
-const btns = tagsList.querySelectorAll('button');
+const btns = tagsList.querySelectorAll('li');
 const input = document.querySelector('.tags').querySelector('input')
+const tagsInner = document.querySelector('.tags__inner');
 
 
 const data = [{
@@ -71,9 +72,8 @@ function searchRes(value) {
                 />
                 <div class="mini__article">
                   <a href="./article.html"><h3>${article.topic}</h3></a>
-                  <span>${article.author}</span>
-                  <span>&bull;</span>
-                  <span>${article.date}</span>
+                  <span class="mini__article_author">${article.author}</span>
+                  <span class="mini__article_date">${article.date}</span>
                   <p>
                     ${article.text}
                   </p>

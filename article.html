@@ -9,7 +9,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
+     <header class="header">
       <div class="container">
         <div class="header__inner">
           <div class="logo">
@@ -18,18 +18,21 @@
               <p><span>nu</span>ntium.</p>
             </a>
           </div>
-            <nav class="nav">
-              <a href="./index.html">Home</a>
-              <a href="./tags.html">Tags</a>
-              <a href="./about.html">About</a>
+            <div aria-expanded="false" class="nav__wrapper">
+              <nav class="nav">
+                <a href="./index.html">Home</a>
+                <a href="./tags.html">Tags</a>
+                <a href="./about.html">About</a>
+              </nav>
               <div class="search__wrapper">
-              <button class="find">
-                <img src="./img/search1.svg" alt="" />
-              </button>
-              <input id="search" type="text" />
+                <button class="find">
+                  <img src="./img/search1.svg" alt="" />
+                </button>
+                <input id="search" type="text" />
+              </div>
+              <button class="login">Login</button>
             </div>
-            <button class="login">Login</button>
-            </nav>
+            
           <button class="burger_button">
             <span class="burger"></span>
           </button>
