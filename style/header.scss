@@ -1,34 +1,55 @@
 @import "./variables.scss";
 .header {
   padding: 43px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
   &__inner {
     display: flex;
     align-items: center;
   }
 
-  .nav {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    margin-left: 31px;
+  @media only screen and (max-width: 980px) {
+    padding: 10px 0;
+  }
 
+  .nav__wrapper {
+    display: flex;
+    width: 100%;
     @media only screen and (max-width: 980px) {
-      display: none;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.4s;
+      transform: translateY(-100%);
+      height: 100vh;
+      padding-top: 100px;
       flex-direction: column;
-      align-items: end;
       position: absolute;
+      align-items: center;
       z-index: 10;
       right: 0;
       top: 116px;
-      text-align: right;
       width: 100%;
       background-color: #fff;
       & > * {
         width: 100%;
         margin-right: 0 !important;
         padding: 10px;
-        border-bottom: 1px solid #000;
       }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    margin-left: 31px;
+    flex-grow: 1;
+    @media only screen and (max-width: 980px) {
+      flex-direction: column;
+      flex-grow: 0;
+      margin-left: 0;
     }
 
     a {
@@ -40,8 +61,9 @@
         margin-right: 31px;
       }
 
-      &:last-of-type {
-        flex-grow: 1;
+      @media only screen and (max-width: 980px) {
+        margin-right: 0 !important;
+        margin-bottom: 20px;
       }
     }
   }
@@ -88,6 +110,9 @@
 
   .search__wrapper {
     position: relative;
+    @media only screen and (max-width: 980px) {
+      display: none;
+    }
 
     input {
       padding-left: 10px;
@@ -123,6 +148,9 @@
     height: 46px;
     padding: 11px;
     font-family: $titles;
+    @media only screen and (max-width: 980px) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -153,6 +181,19 @@
   background-color: black;
 }
 
-.open {
-  display: flex !important;
+[aria-expanded="true"] {
+  transition: 0.4s !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  transform: translateY(0%) !important;
+}
+
+[data-opened="true"] {
+  transform: rotate(-90deg);
+  & .burger::before {
+    transform: rotate(-28deg);
+  }
+  & .burger::after {
+    transform: rotate(28deg);
+  }
 }

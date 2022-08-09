@@ -21,19 +21,22 @@
               <p><span>nu</span>ntium.</p>
             </a>
           </div>
-            <nav class="nav">
-              <a href="./index.html" class="active">Home</a>
-              <a href="./tags.html">Tags</a>
-              <a href="./about.html">About</a>
+            <div aria-expanded="false" class="nav__wrapper">
+              <nav class="nav">
+                <a href="./index.html" class="active">Home</a>
+                <a href="./tags.html">Tags</a>
+                <a href="./about.html">About</a>
+              </nav>
               <div class="search__wrapper">
-              <button class="find">
-                <img src="./img/search1.svg" alt="" />
-              </button>
-              <input id="search" type="text" />
+                <button class="find">
+                  <img src="./img/search1.svg" alt="" />
+                </button>
+                <input id="search" type="text" />
+              </div>
+              <button class="login">Login</button>
             </div>
-            <button class="login">Login</button>
-            </nav>
-          <button class="burger_button">
+            
+          <button data-opened="false" class="burger_button">
             <span class="burger"></span>
           </button>
         </div>
@@ -49,9 +52,8 @@
               <div class="mini__article">
                 <span class="topic">FEATURED ARTICLE</span>
                 <a href="./article.html"><h3>World’s Most Dangerous Technology Ever Made.</h3></a>
-                <span>Ralph Hawkins</span>
-                <span>&bull;</span>
-                <span> May 7, 2019 (10 mins read)</span>
+                <span class="mini__article_author">Ralph Hawkins</span>
+                <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                 <p>
                   Proident aliquip velit qui commodo officia qui consectetur
                   dolor ullamco aliquip elit incididunt. Ea minim ex consectetur
@@ -75,9 +77,8 @@
                 <div class="mini__article">
                   <span class="topic">MINIMALISM</span>
                   <a href="./article.html"><h3>Culpa sit Laboris Exercitation ea Fugiat</h3></a>
-                  <span>Leslie Pena</span>
-                  <span>&bull;</span>
-                  <span>April 25, 2012 (6 mins read)</span>
+                  <span class="mini__article_author">Ralph Hawkins</span>
+                  <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                   <p>
                     Incididunt occaecat et qui dolore consectetur magna. Lorem
                     veniam ut et labore consequat ut ex sunt. Ut et nostrud
@@ -94,9 +95,8 @@
                 <div class="mini__article">
                   <span class="topic">TECHNOLOGY</span>
                   <a href="./article.html"><h3>Amet non Ex Officia nulla Cupidatat</h3></a>
-                  <span>Jacob Henry</span>
-                  <span>&bull;</span>
-                  <span>September 27, 2017 (8 mins read)</span>
+                  <span class="mini__article_author">Ralph Hawkins</span>
+                  <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                   <p>
                     Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud
                     irure id ipsum aute excepteur duis sint. Do occaecat sit
@@ -113,9 +113,8 @@
                 <div class="mini__article">
                   <span class="topic">ARTICLE</span>
                   <a href="./article.html"><h3>Dolor ex Tempor Cotur Culpa li</h3></a>
-                  <span>Darrell Lane</span>
-                  <span>&bull;</span>
-                  <span>May 16, 2017 (3 mins read)</span>
+                  <span class="mini__article_author">Ralph Hawkins</span>
+                  <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                   <p>
                     Incididunt sint nulla eu adipisicing eu reprehenderit
                     proident consequat est. Nisi consectetur incididunt mollit
@@ -138,9 +137,8 @@
               <div class="mini__article">
                 <span class="topic">INTERIOR</span>
                 <a href="./article.html"><h3>Laborum Ullamco Sunt id ut Sunt</h3></a>
-                <span>Bessie Hawkins</span>
-                <span>&bull;</span>
-                <span>May 7, 2019 (10 mins read)</span>
+                <span class="mini__article_author">Ralph Hawkins</span>
+                <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                 <p>
                   Proident aliquip velit qui commodo officia qui consectetur
                   dolor ullamco aliquip elit incididunt. Ea minim ex consectetur
@@ -166,9 +164,8 @@
                 <div class="mini__article">
                   <span class="topic">NATURE</span>
                   <a href="./article.html"><h3>CTempor deserunt Sunt Qui</h3></a>
-                  <span>Connie Robertson</span>
-                  <span>&bull;</span>
-                  <span>November 3, 2012</span>
+                  <span class="mini__article_author">Ralph Hawkins</span>
+                  <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                   <p>
                     Ea qui dolor aute cupidatat ad pariatur proident. Mollit
                     nulla tempor aute reprehenderit ut dolore mollit nisi
@@ -185,9 +182,8 @@
                 <div class="mini__article">
                   <span class="topic">PLANTS</span>
                   <a href="./article.html"><h3>Occaecat Anim eu Qui</h3></a>
-                  <span>Eleanor Williamson</span>
-                  <span>&bull;</span>
-                  <span>September 28, 2014</span>
+                  <span class="mini__article_author">Ralph Hawkins</span>
+                  <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                   <p>
                     Qui ipsum consectetur ad incididunt et aliquip exercitation
                     laboris nisi reprehenderit. Et excepteur commodo esse enim
@@ -204,9 +200,8 @@
                 <div class="mini__article">
                   <span class="topic">ARTICLE</span>
                   <a href="./article.html"><h3>Dolor ex Tempor Cotur Culpa li</h3></a>
-                  <span>Darrell Lane</span>
-                  <span>&bull;</span>
-                  <span>May 16, 2017 (3 mins read)</span>
+                  <span class="mini__article_author">Ralph Hawkins</span>
+                  <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                   <p>
                     Incididunt sint nulla eu adipisicing eu reprehenderit
                     proident consequat est. Nisi consectetur incididunt mollit
@@ -226,9 +221,8 @@
                 <div class="mini__article">
                   <span class="topic">COLORFUL</span>
                   <a href="./article.html"><h3>Occaecat Anim eu Qui</h3></a>
-                  <span>Ted Simmmons</span>
-                  <span>&bull;</span>
-                  <span>June 21, 2015</span>
+                  <span class="mini__article_author">Ralph Hawkins</span>
+                  <span class="mini__article_date"> May 7, 2019 (10 mins read)</span>
                   <p>
                     Amet ipsum occaecat aliqua aute nisi laboris nostrud culpa
                     est do. Aliqua esse velit in excepteur esse qui voluptate
@@ -266,22 +260,6 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer_container">
-        <div class="footer__inner">
-          <h4>want to connect?</h4>
-          <p>
-            Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi
-            qui..
-          </p>
-          <div class="social_icons">
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
