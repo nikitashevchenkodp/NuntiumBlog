@@ -148,10 +148,6 @@
     height: 46px;
     padding: 11px;
     font-family: $titles;
-    &:hover {
-      transform: scale(1.02);
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
     @media only screen and (max-width: 980px) {
       margin-left: 0;
     }

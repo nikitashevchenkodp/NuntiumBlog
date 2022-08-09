@@ -30,6 +30,16 @@ button {
   transition: 0.3s;
 }
 
+<<<<<<< HEAD
+=======
+button:not(.burger_button):hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+>>>>>>> 812a2e4840c8bae864b9369eb3d8d9bff0324815
 img {
   width: 100%;
 }
@@ -261,6 +271,7 @@ h6 {
   font-family: "Libre Baskerville", serif;
 }
 
+<<<<<<< HEAD
 .header .login:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -268,6 +279,8 @@ h6 {
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+=======
+>>>>>>> 812a2e4840c8bae864b9369eb3d8d9bff0324815
 @media only screen and (max-width: 980px) {
   .header .login {
     margin-left: 0;
